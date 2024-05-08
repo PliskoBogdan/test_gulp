@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    span {
+        color: red
+    }
+    background: url(@img/map.jpg) 0 0 no-repeat;
+}
+
+@media (max-width: 768px) {
+    span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+
