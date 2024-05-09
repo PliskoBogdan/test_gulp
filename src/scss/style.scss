@@ -1,6 +1,10 @@
+@import "fonts";
+
 body {
     background-color: black;
     span {
+        font-family: HindVadodara;
+        font-size: 20px;
         color: red
     }
     background: url(@img/map.jpg) 0 0 no-repeat;
