@@ -4,6 +4,8 @@ import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
 
 global.app = {
+    isBuild: process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
     path,
     gulp,
     plugins
@@ -16,7 +18,8 @@ import { server } from './gulp/tasks/server.js'
 import { scss } from './gulp/tasks/scss.js'
 import { js } from './gulp/tasks/js.js'
 import { images } from './gulp/tasks/images.js'
-import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js"; 
+import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
+import { svgSprite } from "./gulp/tasks/svgSprite.js";
 
 function watcher() {
     gulp.watch(path.watch.files, copy)
@@ -26,10 +29,13 @@ function watcher() {
     gulp.watch(path.watch.images, images)
 }
 
+
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle)
 
 const mainTask = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images))
 
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTask);
 
 gulp.task('default', dev)
+export { svgSprite, dev }
