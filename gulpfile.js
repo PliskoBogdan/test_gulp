@@ -38,4 +38,4 @@ const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTask);
 
 gulp.task('default', dev)
-export { svgSprite, dev }
+export { svgSprite, dev, build }
