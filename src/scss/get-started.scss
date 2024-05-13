@@ -1,0 +1,112 @@
+.get-started {
+    padding: 4rem 0rem 4rem 4rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+
+    @media only screen and (max-width: $laptop-bp) {
+        grid-template-columns: 1fr;
+        padding: 0rem 0rem 1rem 1rem;
+    }
+    &__main-vector {
+        position: relative;
+        @media only screen and (max-width: $mobile-bp) {
+            height: 100%;
+            margin-top: 156px;
+        }
+    }
+
+    &__left-block {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__right-block {
+        height: 33rem;
+
+        @media only screen and (max-width: 450px) {
+            height: 20rem;
+        }
+    }
+    &__title{ 
+        font-size: 87px;
+        color: $text-main;
+        font-weight: 400;
+        line-height: 87px;
+        @media only screen and (max-width: $mobile-bp) {
+            font-size: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 25px;
+        color: #331B3BA8;
+        max-width: 520px;
+
+        @media only screen and (max-width: $mobile-bp) {
+            margin: 0;
+        }
+    }
+    &__button  {
+        background-color: $text-main;
+        color: $white;
+        padding: 25px 40px;
+
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 700;
+        width: 205px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    &__vector1 {
+        position: absolute;
+        z-index: 1;
+        // bottom: 3rem;
+        right: 8rem;
+        top: -8rem;
+        @media only screen and (max-width: $mobile-bp) {
+            img {
+                width: 40vw;
+            }
+            top: -5rem;
+            right: 4rem;
+        }
+    
+    }
+    &__main-img {
+        position: absolute;
+        z-index: 2;
+        right: 1rem;
+        top: -3rem;
+
+        @media only screen and (max-width: $mobile-bp) {
+            
+            img {
+                width: 65vw;
+            }
+        }
+        // bottom: 6rem;
+    }
+    &__vector2 {
+        position: absolute;
+        z-index: 0;
+        width: 500px;
+        height: 500px;
+        border: 1px dashed #333;
+        border-radius: 50%;
+        // bottom: 5rem;
+        right: 15rem;
+        top: -1rem;
+
+        @media only screen and (max-width: $mobile-bp) {
+            width: 50vw;
+            height: 50vw;
+            top: -4rem;
+            right: 5rem;
+        }
+    }
+}

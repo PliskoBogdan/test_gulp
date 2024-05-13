@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        @@include('html/header.html')
-        <main>
-            <div class="what-we-do">
-                <h1 class="what-we-do__title1">What We Do</h1>
-                <h1 class="what-we-do__title2">For Your <span class="highlighted-text">Business</span></h1>
-            </div>
-        </main>
-        @@include('html/footer.html')
+      <div class="head-bg-eclipse">
+        <img src="@img/head-bg.png" alt="" />
+      </div>
+      @@include('html/header.html')
+      <main>
+        @@include('html/getStarted.html')
+        <div class="what-we-do">
+          <h1 class="what-we-do__title">
+            <b>What We Do</b><br />
+            For Your <span class="highlighted-text">Business</span>
+          </h1>
+        </div>
+      </main>
+      @@include('html/footer.html')
     </div>
-    
+
     <script src="js/app.min.js"></script>
-</body>
+  </body>
 </html>
