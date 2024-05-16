@@ -1,0 +1,102 @@
+.head-bg-eclipse {
+    position: absolute;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  
+    @media only screen and (max-width: $mobile-bp) {
+      top: 17rem;
+      left: 10rem;
+    }
+  }
+
+.header {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $mobile-bp) {
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 1rem;
+    }
+  
+    &__company-title {
+      color: $text-main;
+      font-size: 24px;
+      font-weight: 600;
+      font-family: PlayfairDisplay;
+      @media only screen and (max-width: $mobile-bp) {
+        font-size: 30px;
+      }
+    }
+  
+    &__navigation-list {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 35px;
+      transition: .4s;
+    }
+  
+    &__navigation-item {
+      font-size: 16px;
+      color: $text-main;
+      cursor: pointer;
+      transition: .4s;
+  
+      @media only screen and (max-width: $mobile-bp) {
+        font-size: 15px;
+      }
+  
+      &:hover {
+          color: #7a5c85;
+      }
+    }
+  
+    &__navigation-item--active {
+      position: relative;
+      z-index: 2;
+      font-weight: 600;
+      color: $text-main;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 45%;
+        left: 0;
+        bottom: 0;
+        height: 0.1rem;
+        background-color: #fdc221;
+        z-index: -2;
+      }
+    }
+    &__social-links {
+      @media only screen and (max-width: $mobile-bp) {
+          margin: 15px;
+      }
+    }
+    &__social-links-list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 50px;
+      list-style-type: none;
+    }
+    &__social-links-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__social-links-logo {
+      width: 20px;
+      height: 25px;
+    }
+  
+    &__social-links-eclipse {
+      position: absolute;
+    }
+  }

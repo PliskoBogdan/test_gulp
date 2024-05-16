@@ -1,4 +1,6 @@
 import * as flsFunctions from "./modules/functions.js";
+flsFunctions.isWebp();
+
 
 const emailInpueEl = document.querySelector(".footer__email-area-input");
 const emailButtonEl = document.querySelector(".footer__email-area-button");
@@ -89,7 +91,4 @@ const resizeObserver = new ResizeObserver((entries) => {
   }
 });
 
-// Начинаем отслеживание изменений ширины экрана для определенного элемента
 resizeObserver.observe(document.body);
-
-flsFunctions.isWebp();
